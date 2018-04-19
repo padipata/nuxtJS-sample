@@ -1,6 +1,6 @@
 import dkAxios from '../assets/jslibs/dk-axios'
 import utils from '../assets/jslibs/dk-utils'
-import  env from '../configs/enviroment'
+import env from '../configs/enviroment'
 
 /*
   地址列表
@@ -10,7 +10,7 @@ const getAddressList = () => {
     url: 'app/address/receiver',
     method: 'get',
     headers: {
-      'X-Access-Token': utils.getCookie('access_token')
+      'X-Access-Token': process.BROWSER_BUILD?utils.getCookie('access_token'):''
     }
   })
 };

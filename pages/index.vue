@@ -30,7 +30,7 @@
     <p class="title large-text" @click="event().onClick()">Yipage</p>
     <p class="intro">一页科技移动端组件库</p>
     <ul class="list-container">
-      <li class="middle-text" v-for="(item,index) in list" :key="index">{{item}}</li>
+      <li class="middle-text" v-for="(item, index) in list" :key="index">{{item}}</li>
     </ul>
   </section>
 </template>
@@ -44,12 +44,12 @@
       }
     },
     async asyncData() {
-//      接口已失效
-//      let {data, status} = await getAddressList().catch(error => {
-//        this.$uihelper.toast(error.data.error.message);
-//      });
-//      console.log(data,'data');
-//      console.log(status,'status')
+      let {data, status} = await getAddressList().catch(error => {
+        console.log(error)
+        return error
+      });
+      console.log(data,'data');
+      console.log(status,'status')
     },
     methods: {
       event() {

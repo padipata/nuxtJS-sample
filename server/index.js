@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser')
 const wxLogin = require('../server/middleware/wx-login')
 const app = express()
 const host = process.env.HOST || '0.0.0.0'
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 
 app.set('port', port)
 
