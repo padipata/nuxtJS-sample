@@ -5,15 +5,20 @@
 import {Toast,Indicator} from 'mint-ui'
 
 export default {
+  //提示
   toast(msg){
     Toast({
       message: msg,
       duration: 1500
     });
   },
+
+  //开启loading
   showLoading(msg){
     Indicator.open(msg);
   },
+
+  //关闭
   hideLoading(){
     Indicator.close();
   }
