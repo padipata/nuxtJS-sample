@@ -1,5 +1,5 @@
 /**
- * Created by ivancai on 2018/2/5.
+ * Created by padipata on 2018/4/19.
  * 此工具类请放置一些常用操作函数，如字符操作，存取cookie等
  */
 

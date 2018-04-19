@@ -29,8 +29,8 @@
 
 <template>
   <section class="container">
-    <p class="title large-text">Dankal</p>
-    <p class="intro">蛋壳创意移动端组件库</p>
+    <p class="title large-text">Yipage</p>
+    <p class="intro">一页科技移动端组件库</p>
     <ul class="list-container">
       <li class="middle-text" v-for="item in list">{{item}}</li>
     </ul>

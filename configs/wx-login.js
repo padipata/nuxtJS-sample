@@ -1,9 +1,9 @@
 /**
- * Created by ivancai on 2018/2/5.
+ * Created by padipata on 2018/4/19.
  * 微信登录相关参数
  */
 const BASE_REDIRECT_URL = "https://open.weixin.qq.com/connect/oauth2/authorize"
-const APP_ID = "wx5bbefd1ea8a65859"
+const APP_ID = "xxxxxxxxx"
 const APP_DOMAIN = "http://web.luckydd.cn/" //app网页授权域名
 const SCOPE = "snsapi_userinfo"  //snsapi_base或snsapi_userinfo
 const STATE = "STATE" //可能需要携带的附加参数,目前大多业务暂时不需要用到，写死即可
