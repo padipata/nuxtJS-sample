@@ -1,3 +1,8 @@
+/**
+ * 移动端适配方案
+ * Created by padipata on 2017/4/19.
+ */
+
 (function (doc, win) {
   var docEl = doc.documentElement,
     resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',

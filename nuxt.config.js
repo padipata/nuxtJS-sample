@@ -14,6 +14,9 @@ module.exports = {
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+    ],
+    script: [
+      { src: '/rem.js' }
     ]
   },
   router: {
@@ -54,6 +57,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
+    vendor: ['axios'],
     extend(config, ctx) {
 
     }

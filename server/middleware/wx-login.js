@@ -5,16 +5,17 @@ const FINAL_URL = require('../../configs/wx-login').FINAL_URL
 module.exports = function (req, res, next) {
   let token = '', ua = req.headers['user-agent']
   console.log(ua, 'ua')
+
   if (ua.indexOf('MicroMessenger') == -1 && isSupportNormalBrower) { //如果不是微信浏览器并且支持普通浏览器环境运行，不做微信授权登陆
-    next()
+    next();
     return
   }
-  try {
-    token = req.cookies.projectName_token
-    console.log(token, "token")
-  } catch (e) {
-  }
+
+  token = req.cookies.projectName_token
+  console.log(token, "token")
+
   let code = req.query.code
+
   if (!token) {  //token为空,需要进行微信登录
     if (!code) { //code也为空,说明还没有进行登录授权重定向
       res.redirect(FINAL_URL)
