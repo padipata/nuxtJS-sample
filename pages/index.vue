@@ -29,6 +29,7 @@
   <section class="container">
     <p class="title large-text" @click="event().onClick()">Yipage</p>
     <p class="intro">一页科技移动端组件库</p>
+    <p>{{siteBox}}</p>
     <ul class="list-container">
       <li class="middle-text" v-for="(item, index) in list" :key="index">{{item}}</li>
     </ul>
@@ -40,16 +41,14 @@
   export default {
     data() {
       return {
-        list: ['平台登录', '微信登录授权', '常见问题', '意见反馈', '搜索页', '轮播图', '收货地址', '评价', '反馈弹窗']
+        list: ['平台登录', '微信登录授权', '常见问题', '意见反馈', '搜索页', '轮播图', '收货地址', '评价', '反馈弹窗'],
       }
     },
     async asyncData() {
-      let {data, status} = await getAddressList().catch(error => {
-        console.log(error)
-        return error
-      });
-      console.log(data,'data');
-      console.log(status,'status')
+      let {data} = await getAddressList();
+      return {
+        siteList: data
+      }
     },
     methods: {
       event() {
