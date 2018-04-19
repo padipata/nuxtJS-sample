@@ -3,7 +3,7 @@
  * 开发环境，测试环境，生产环境配置
  * 测试环境比较少用到，一般大型项目才划分出此环境
  */
-const DEV = "https://api-template.dankal.cn/v1/"
+const DEV = "https://api-template.yipage.cn/v2/"
 const TEST = ""
 const PRO = ""
 const FINAL_PRO_DOMAIN = "yipage.cn" //最终线上地址一级域名
